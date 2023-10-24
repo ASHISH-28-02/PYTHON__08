@@ -35,5 +35,5 @@ def print_star_pattern(word):
         print()
 
 if __name__ == "__main__":
-    name = "STAR"
+    name = input("ENTER YOUR WORD(IN CAPITAL LETTERS):")
     print_star_pattern(name)
