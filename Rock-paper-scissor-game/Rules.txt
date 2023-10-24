@@ -1,0 +1,14 @@
+Welcome...
+
+-------------- Rules For Winning the Game --------------
+
+IF ROCK V/S PAPER       -----> PAPER WINS THE GAME
+IF PAPER V/S SCISSOR    -----> SCISSOR WINS THE GAME
+IF ROCK V/S SCISSOR     -----> ROCK WINS THE GAME
+
+---------------------------------------------------------
+
+
+Let's start the game..
+
+>>>
