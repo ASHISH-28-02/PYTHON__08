@@ -12,7 +12,7 @@
 | 5 | [DECIMAL TO BINARY CONVERTER](https://github.com/ASHISH-28-02/PYTHON__08/blob/main/ConvertDecimalToBinary.py)|
 | 6 | [KNAPSACK](https://github.com/ASHISH-28-02/PYTHON__08/blob/main/KnapSack.py)|
 | 7 | [FACTORIAL](https://github.com/ASHISH-28-02/PYTHON__08/blob/main/Factorial.py)|
-| 8 | [ROCK PAPER SCISSORS]()|
+| 8 | [ROCK PAPER SCISSORS](https://github.com/ASHISH-28-02/PYTHON__08/tree/main/Rock-Paper-Scissor)|
 
  ## CONTRIBUTORS
  <a href="https://github.com/ASHISH-28-02/PYTHON__08/graphs/contributors">
