@@ -1,0 +1,121 @@
+Timer:
+<Timer>:
+    GridLayout:
+        cols: 1
+        Label:
+            font_size: self.height/3
+            text: root.time_text
+        BoxLayout:
+            padding: self.height/10
+            ProgressBar:
+                size_hint:1,1
+                max: root.maxTime
+                value: root.maxTime - root.timeNow
+        GridLayout:
+            id: ButtonLayout
+            cols: 3
+            padding: self.height/10
+            spacing: self.height/10
+            Button:
+                text: "Reset"
+                size_hint: .3, .5
+                on_press: root.reset()
+            Button:
+                text: "Set"
+                size_hint: .3, .5
+                on_press: root.ableInputMenu()
+            Button:
+                text: root.startBtText
+                size_hint: .3, .5
+                on_press: root.startBt()
+    AnchorLayout:
+        id:"inputMenu"
+        opacity: 1 if root.inputMenuState else 0
+        disabled: not root.inputMenuState
+        size_hint: (1,1) if root.inputMenuState else (0,0)
+        anchor_x: "center"
+        anchor_y: "center"
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, .8
+            Rectangle:
+                size: self.size
+        GridLayout:
+            size_hint:.8,.2
+            cols:3
+            spacing:self.width/20
+            Button:
+                text: "Cancel"
+                size_hint: .3, 1
+                on_press: root.disableInputMenu()
+            GridLayout:
+                id:"inputField"
+                cols:3
+                spacing:10
+                Button:
+                    text: "^"
+                    size_hint: .3, .3
+                    on_press: hr_input.text = str(1+int(hr_input.text))
+                Button:
+                    text: "^"
+                    size_hint: .3, .3
+                    on_press: min_input.text = str(1+int(min_input.text))
+                Button:
+                    text: "^"
+                    size_hint: .3, .3
+                    on_press: sc_input.text = str(1+int(sc_input.text))
+                TextInput:
+                    id: hr_input
+                    text: "00"
+                    multiline: False
+                TextInput:
+                    id: min_input
+                    text: "05"
+                    multiline: False
+                TextInput:
+                    id: sc_input
+                    text: "00"
+                    multiline: False
+                Button:
+                    text: "v"
+                    size_hint: .3, .3
+                    on_press: hr_input.text = str(int(hr_input.text)-1)
+                Button:
+                    text: "v"
+                    size_hint: .3, .3
+                    on_press: min_input.text = str(int(min_input.text)-1)
+                Button:
+                    text: "v"
+                    size_hint: .3, .3
+                    on_press: sc_input.text = str(int(sc_input.text)-1)
+            Button:
+                text: "Done"
+                size_hint: .3, 1
+                on_press: root.done(hr_input.text, min_input.text, sc_input.text)
+    AnchorLayout:
+        opacity: 1 if root.popupState else 0
+        disabled: not root.popupState
+        size_hint: (1,1) if root.popupState else (0,0)
+        anchor_x: "center"
+        anchor_y: "center"
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, .8
+            Rectangle:
+                size: self.size
+        GridLayout:
+            size_hint:.8,.8
+            cols:1
+            spacing:self.width/20
+            padding:self.width/20
+            Label:
+                text: "Time's Up"
+                font_size: self.height/8
+            Button:
+                text: "Stop"
+                size_hint: .4, .5
+                on_press: root.stopAlarm()
+            Button:
+                text: "Reset"
+                size_hint: .3, .4
+                on_press: root.resetAlarm()
