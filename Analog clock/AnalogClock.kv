@@ -1,0 +1,86 @@
+RoundClock:
+<RoundClock>:
+    canvas:
+        Color:
+            rgb: 0, 0, 0
+        Line:
+            points: (root.winWd/2, root.winHt/2, root.winWd/2 + root.hrX, root.winHt/2 + root.hrY)
+            width: root.clockScale/80
+        Line:
+            points: (root.winWd/2, root.winHt/2, root.winWd/2 + root.minX, root.winHt/2 + root.minY)
+            width: root.clockScale/100
+        Line:
+            points: (root.winWd/2, root.winHt/2, root.winWd/2 + root.secX, root.winHt/2 + root.secY)
+            width: root.clockScale/150
+    Label:
+        text: "12"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 - root.clockScale/8/2, root.winHt/2 + root.clockScale/2 - root.clockScale/8 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "1"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 + (root.clockScale/2-root.clockPd)/2 - root.clockScale/8/2, root.winHt/2 + (root.clockScale/2-root.clockPd)*.8 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "2"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 + (root.clockScale/2-root.clockPd)*.8 - root.clockScale/8/2, root.winHt/2 + (root.clockScale/2-root.clockPd)/2 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "3"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 + root.clockScale/2 - root.clockPd - root.clockScale/8/2, root.winHt/2 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "4"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 + (root.clockScale/2-root.clockPd)*.8 - root.clockScale/8/2, root.winHt/2 - (root.clockScale/2-root.clockPd)/2 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "5"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 + (root.clockScale/2-root.clockPd)/2 - root.clockScale/8/2, root.winHt/2 - (root.clockScale/2-root.clockPd)*.8 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "6"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 - root.clockScale/8/2, root.winHt/2 - root.clockScale/2 + root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "8"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 - (root.clockScale/2-root.clockPd)*.8 - root.clockScale/8/2, root.winHt/2 - (root.clockScale/2-root.clockPd)/2 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "7"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 - (root.clockScale/2-root.clockPd)/2 - root.clockScale/8/2, root.winHt/2 - (root.clockScale/2-root.clockPd)*.8 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "9"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 - root.clockScale/2 + root.clockScale/8/2, root.winHt/2 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "11"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 - (root.clockScale/2-root.clockPd)/2 - root.clockScale/8/2, root.winHt/2 + (root.clockScale/2-root.clockPd)*.8 - root.clockScale/8/2
+        color: 0, 0, 0, 1
+    Label:
+        text: "10"
+        font_size: root.clockScale/8
+        size: root.clockScale/8, root.clockScale/8
+        pos: root.winWd/2 - (root.clockScale/2-root.clockPd)*.8 - root.clockScale/8/2, root.winHt/2 + (root.clockScale/2-root.clockPd)/2 - root.clockScale/8*.6
+        color: 0, 0, 0, 1
